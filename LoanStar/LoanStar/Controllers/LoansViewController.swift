@@ -16,6 +16,7 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
     var detailViewController: DetailViewController? = nil
     var loans = [Loan]()
     var filteredLoans = [Loan]()
+    let loanManager = LoanManager()
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -36,19 +37,15 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Setup the search footer
         tableView.tableFooterView = searchFooter
         
-        loans = [
-            Loan(name: "Mark Loan", amount: "100.00", category: "Open"),
-            Loan(name: "David Loan", amount: "100.00", category: "Open"),
-            Loan(name: "Sid Loan", amount: "100.00", category: "Filled"),
-            Loan(name: "Mark Loan", amount: "100.00", category: "Open"),
-            Loan(name: "Brendan Loan", amount: "100.00", category: "Filled"),
-            Loan(name: "Max Loan", amount: "100.00", category: "Closed"),
-            Loan(name: "Mark Loan", amount: "100.00", category: "Open"),
-            Loan(name: "Brendan Loan", amount: "100.00", category: "Filled"),
-            Loan(name: "Max Loan", amount: "100.00", category: "Closed"),
-            Loan(name: "David Loan", amount: "100.00", category: "Open")
-        ]
-        
+        // Search for loans
+        loanManager.getLoanResults { (results, error) in
+            if let results = results {
+                self.loans = results
+                self.tableView.reloadData()
+                self.tableView.setContentOffset(CGPoint.zero, animated: false)
+            }
+            if !error.isEmpty { print("Search error: " + error) }
+        }
     }
     
     // MARK: - Table View
@@ -96,8 +93,6 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
                 }
                 let controller = segue.destination as! DetailViewController
                 controller.detailLoan = loan
-                //controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                //controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }

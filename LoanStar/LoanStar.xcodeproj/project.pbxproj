@@ -22,6 +22,8 @@
 		A1D59EFB216885640033544A /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D59EFA216885640033544A /* Loan.swift */; };
 		A1D59EFD216886D40033544A /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D59EFC216886D40033544A /* SearchFooter.swift */; };
 		A1D59EFF216888170033544A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D59EFE216888170033544A /* DetailViewController.swift */; };
+		A1D59F0121689FDB0033544A /* LoanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D59F0021689FDB0033544A /* LoanManager.swift */; };
+		A1D59F032168A75F0033544A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D59F022168A75F0033544A /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		A1D59EFA216885640033544A /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		A1D59EFC216886D40033544A /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		A1D59EFE216888170033544A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A1D59F0021689FDB0033544A /* LoanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanManager.swift; sourceTree = "<group>"; };
+		A1D59F022168A75F0033544A /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 			children = (
 				A1D59EF42168807A0033544A /* Plist.swift */,
 				A1D59EFA216885640033544A /* Loan.swift */,
+				A1D59F0021689FDB0033544A /* LoanManager.swift */,
+				A1D59F022168A75F0033544A /* SwiftyJSON.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,7 +319,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1D59EF7216885160033544A /* LoansViewController.swift in Sources */,
+				A1D59F0121689FDB0033544A /* LoanManager.swift in Sources */,
 				A1D59EF52168807A0033544A /* Plist.swift in Sources */,
+				A1D59F032168A75F0033544A /* SwiftyJSON.swift in Sources */,
 				A1D59EF121687C690033544A /* Double+Extension.swift in Sources */,
 				A1D59EEF21687C560033544A /* UIColor+Extension.swift in Sources */,
 				A1D59EFD216886D40033544A /* SearchFooter.swift in Sources */,
