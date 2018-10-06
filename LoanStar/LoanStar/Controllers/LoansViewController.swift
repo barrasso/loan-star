@@ -17,10 +17,15 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
     var loans = [Loan]()
     var filteredLoans = [Loan]()
     let loanManager = LoanManager()
+    
     let searchController = UISearchController(searchResultsController: nil)
+    let activityIndicator = UIActivityIndicatorView(style: .gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(activityIndicator)
+        activityIndicator.frame = view.bounds
+        activityIndicator.startAnimating()
 
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
@@ -31,7 +36,7 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
         definesPresentationContext = true
         
         // Setup the Scope Bar
-        searchController.searchBar.scopeButtonTitles = ["All", "Open", "Filled", "Closed"]
+        searchController.searchBar.scopeButtonTitles = ["All", "Open", "Filled", "Cancelled"]
         searchController.searchBar.delegate = self
         
         // Setup the search footer
@@ -45,6 +50,7 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.tableView.setContentOffset(CGPoint.zero, animated: false)
             }
             if !error.isEmpty { print("Search error: " + error) }
+            self.activityIndicator.removeFromSuperview()
         }
     }
     
@@ -68,14 +74,15 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LoanCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LoanCell", for: indexPath) as! LoanCell
         let loan: Loan
         if isFiltering() {
             loan = filteredLoans[indexPath.row]
         } else {
             loan = loans[indexPath.row]
         }
-        cell.textLabel!.text = loan.name
+        cell.loan = loan
+        //cell.textLabel!.text = loan.name
         //cell.detailTextLabel!.text = loan.category
         return cell
     }

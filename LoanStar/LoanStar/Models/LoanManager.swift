@@ -14,7 +14,6 @@ final class LoanManager {
     typealias QueryResult = ([Loan]?, String) -> ()
     
     let defaultSession = URLSession(configuration: .default)
-    // 2
     var dataTask: URLSessionDataTask?
     var loans: [Loan] = []
     var errorMessage = ""
@@ -22,7 +21,7 @@ final class LoanManager {
     func getLoanResults(_ completion: @escaping QueryResult) {
         dataTask?.cancel()
         if var urlComponents = URLComponents(string: "https://kovan-api.bloqboard.com/api/v1/Debts") {
-            urlComponents.query = "sortBy=CreationTime"
+            urlComponents.query = "sortBy=CreationTime&limit=20"
             guard let url = urlComponents.url else { return }
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
                 defer { self.dataTask = nil }
