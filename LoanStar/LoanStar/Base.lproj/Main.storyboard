@@ -80,29 +80,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRg-hf-x5f">
-                                                    <rect key="frame" x="15" y="11" width="44" height="58"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="38"/>
-                                                    <color key="textColor" red="0.21960784310000001" green="0.64620535710000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loan Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl9-gg-p8G">
-                                                    <rect key="frame" x="67" y="47" width="267" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl9-gg-p8G">
+                                                    <rect key="frame" x="14" y="47" width="269" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="xBA-nV-cBO"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="262-0s-D38">
-                                                    <rect key="frame" x="67" y="11" width="267" height="28"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="262-0s-D38">
+                                                    <rect key="frame" x="14" y="11" width="269" height="28"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="262-0s-D38" firstAttribute="leading" secondItem="bl9-gg-p8G" secondAttribute="leading" id="7Sd-xo-lRo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="262-0s-D38" secondAttribute="trailing" constant="51" id="EBN-Ah-s0v"/>
+                                                <constraint firstItem="262-0s-D38" firstAttribute="leading" secondItem="GqU-xI-LVt" secondAttribute="leadingMargin" constant="-1" id="L4b-Ml-Dl0"/>
+                                                <constraint firstItem="262-0s-D38" firstAttribute="top" secondItem="GqU-xI-LVt" secondAttribute="topMargin" id="SPh-3u-pZs"/>
+                                                <constraint firstItem="262-0s-D38" firstAttribute="trailing" secondItem="bl9-gg-p8G" secondAttribute="trailing" id="TB7-b6-oMv"/>
+                                                <constraint firstItem="bl9-gg-p8G" firstAttribute="top" secondItem="262-0s-D38" secondAttribute="bottom" constant="8" symbolic="YES" id="iGl-Ou-Ue4"/>
+                                                <constraint firstItem="bl9-gg-p8G" firstAttribute="bottom" secondItem="GqU-xI-LVt" secondAttribute="bottomMargin" id="nu9-Mb-qqC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="amountLabel" destination="262-0s-D38" id="kjG-3v-KGt"/>
@@ -183,7 +185,7 @@
         <scene sceneID="WRb-hd-t49">
             <objects>
                 <viewController id="BvX-YW-30f" customClass="DetailViewController" customModule="LoanStar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="6wL-FN-nrb">
+                    <view key="view" contentMode="scaleToFill" id="6wL-FN-nrb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -197,9 +199,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="x5h-YY-TZ1" firstAttribute="trailing" secondItem="6wL-FN-nrb" secondAttribute="trailingMargin" id="ATq-Hj-VYM"/>
-                            <constraint firstItem="qhg-BO-AUp" firstAttribute="bottom" secondItem="x5h-YY-TZ1" secondAttribute="bottom" constant="542" id="TcW-CT-XdN"/>
+                            <constraint firstItem="x5h-YY-TZ1" firstAttribute="top" secondItem="qhg-BO-AUp" secondAttribute="top" constant="23" id="D0F-Ar-MwO"/>
                             <constraint firstItem="x5h-YY-TZ1" firstAttribute="leading" secondItem="6wL-FN-nrb" secondAttribute="leadingMargin" id="Z1w-Ne-gEv"/>
-                            <constraint firstItem="x5h-YY-TZ1" firstAttribute="top" secondItem="qhg-BO-AUp" secondAttribute="top" constant="23" id="xpe-gX-D0S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qhg-BO-AUp"/>
                     </view>

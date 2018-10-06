@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import web3swift
 
 final class LoanManager {
     
@@ -55,10 +56,11 @@ final class LoanManager {
             return
         }
         for loanObject in array {
-            if let name = loanObject["id"].string {
-                let amount = loanObject["principalAmount"].stringValue
+            if let bigIntAmount = Web3Utils.parseToBigUInt(loanObject["principalAmount"].stringValue, units: .wei) {
+                let amount = Web3Utils.formatToEthereumUnits(bigIntAmount)
+                let name = loanObject["id"].stringValue
                 let category = loanObject["status"].stringValue
-                loans.append(Loan(name: name, amount: amount, category: category))
+                loans.append(Loan(name: name, amount: amount!, category: category))
             }
         }
     }

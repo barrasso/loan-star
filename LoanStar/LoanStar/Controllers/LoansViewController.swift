@@ -36,7 +36,7 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
         definesPresentationContext = true
         
         // Setup the Scope Bar
-        searchController.searchBar.scopeButtonTitles = ["All", "Open", "Filled", "Cancelled"]
+        searchController.searchBar.scopeButtonTitles = ["All", "Signed", "Filled", "Cancelled"]
         searchController.searchBar.delegate = self
         
         // Setup the search footer
@@ -82,8 +82,6 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
             loan = loans[indexPath.row]
         }
         cell.loan = loan
-        //cell.textLabel!.text = loan.name
-        //cell.detailTextLabel!.text = loan.category
         return cell
     }
 
@@ -108,7 +106,7 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filteredLoans = loans.filter({( loan : Loan) -> Bool in
-            let doesCategoryMatch = (scope == "All") || (loan.category == scope)
+            let doesCategoryMatch = (scope == "All") || (loan.category.contains(scope))
             
             if searchBarIsEmpty() {
                 return doesCategoryMatch
