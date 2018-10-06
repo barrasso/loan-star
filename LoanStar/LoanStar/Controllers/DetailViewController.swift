@@ -21,7 +21,7 @@ class DetailViewController: UIViewController {
     func configureView() {
         if let detailLoan = detailLoan {
             if let detailDescriptionLabel = detailDescriptionLabel {
-                detailDescriptionLabel.text = detailLoan.name
+                detailDescriptionLabel.text = detailLoan.id
                 title = detailLoan.category
             }
         }

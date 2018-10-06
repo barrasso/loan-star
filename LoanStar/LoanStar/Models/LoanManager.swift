@@ -41,6 +41,10 @@ final class LoanManager {
         }
     }
     
+    func post() {
+        
+    }
+    
     fileprivate func updateLoanResults(_ data: Data) {
         var response: JSON?
         loans.removeAll()
@@ -58,9 +62,9 @@ final class LoanManager {
         for loanObject in array {
             if let bigIntAmount = Web3Utils.parseToBigUInt(loanObject["principalAmount"].stringValue, units: .wei) {
                 let amount = Web3Utils.formatToEthereumUnits(bigIntAmount)
-                let name = loanObject["id"].stringValue
+                let id = loanObject["id"].stringValue
                 let category = loanObject["status"].stringValue
-                loans.append(Loan(name: name, amount: amount!, category: category))
+                loans.append(Loan(id: id, amount: amount!, category: category))
             }
         }
     }

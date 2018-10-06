@@ -10,6 +10,7 @@
 		3D662326A632015C3A997EE0 /* Pods_LoanStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42FB894553D2D90C10F535D /* Pods_LoanStar.framework */; };
 		4E67A3085B94A757BCC84CE7 /* Pods_LoanStarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3F3B7EE574D03CDBA524A4 /* Pods_LoanStarTests.framework */; };
 		76C61445A22C341DC0731308 /* Pods_LoanStarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA2E435B52B824E374309BA /* Pods_LoanStarUITests.framework */; };
+		A1987B3E2169483C00E1E599 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1987B3D2169483C00E1E599 /* CreateViewController.swift */; };
 		A1D59EBD21687B5E0033544A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D59EBC21687B5E0033544A /* AppDelegate.swift */; };
 		A1D59EC221687B5E0033544A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D59EC021687B5E0033544A /* Main.storyboard */; };
 		A1D59EC421687B600033544A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D59EC321687B600033544A /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		6D34091BFE70953ABF61DE3D /* Pods-LoanStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoanStar.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoanStar/Pods-LoanStar.release.xcconfig"; sourceTree = "<group>"; };
 		9AA2E435B52B824E374309BA /* Pods_LoanStarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoanStarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E54F768DDF502A3187899E1 /* Pods-LoanStarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoanStarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoanStarTests/Pods-LoanStarTests.release.xcconfig"; sourceTree = "<group>"; };
+		A1987B3D2169483C00E1E599 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		A1D59EB921687B5E0033544A /* LoanStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoanStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D59EBC21687B5E0033544A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1D59EC121687B5E0033544A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				A1D59EF6216885160033544A /* LoansViewController.swift */,
 				A1D59EF8216885280033544A /* ProfileViewController.swift */,
 				A1D59EFE216888170033544A /* DetailViewController.swift */,
+				A1987B3D2169483C00E1E599 /* CreateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftForms/SwiftForms.framework",
 				"${BUILT_PRODUCTS_DIR}/scrypt/scrypt.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
 				"${BUILT_PRODUCTS_DIR}/web3swift/web3swift.framework",
@@ -410,6 +414,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftForms.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/scrypt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/web3swift.framework",
@@ -472,6 +477,7 @@
 			files = (
 				A1D59F0521692E820033544A /* LoanCell.swift in Sources */,
 				A1D59EF7216885160033544A /* LoansViewController.swift in Sources */,
+				A1987B3E2169483C00E1E599 /* CreateViewController.swift in Sources */,
 				A1D59F0121689FDB0033544A /* LoanManager.swift in Sources */,
 				A1D59EF52168807A0033544A /* Plist.swift in Sources */,
 				A1D59F032168A75F0033544A /* SwiftyJSON.swift in Sources */,

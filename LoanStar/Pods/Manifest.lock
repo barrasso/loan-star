@@ -16,6 +16,7 @@ PODS:
     - CryptoSwift (~> 0.11)
   - secp256k1_ios (0.1.3)
   - SipHash (1.2.2)
+  - SwiftForms (1.8.2)
   - web3swift (1.1.6):
     - BigInt (~> 3.1)
     - CryptoSwift (~> 0.11)
@@ -25,6 +26,7 @@ PODS:
     - secp256k1_ios (~> 0.1)
 
 DEPENDENCIES:
+  - SwiftForms (~> 1.8)
   - web3swift (~> 1.1.6)
 
 SPEC REPOS:
@@ -36,6 +38,7 @@ SPEC REPOS:
     - scrypt
     - secp256k1_ios
     - SipHash
+    - SwiftForms
     - web3swift
 
 SPEC CHECKSUMS:
@@ -46,8 +49,9 @@ SPEC CHECKSUMS:
   scrypt: a828bd579086977f6db7f9798d1c6332ccaaed4e
   secp256k1_ios: ac9ef04e761f43c58012b28548afa91493761f17
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
+  SwiftForms: f0d4d30401e21de87d9b7b63a4691a3d4e22bab5
   web3swift: 669f16455d2dffb7bab4b61f39b16f3633d37c7d
 
-PODFILE CHECKSUM: 6bc1e68d53333b342ef20ff830a2ac9dd8216faa
+PODFILE CHECKSUM: 7eddf078ac53f734877c37aa0d82d7c4368945d8
 
 COCOAPODS: 1.5.3

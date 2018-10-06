@@ -111,7 +111,7 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
             if searchBarIsEmpty() {
                 return doesCategoryMatch
             } else {
-                return doesCategoryMatch && loan.name.lowercased().contains(searchText.lowercased())
+                return doesCategoryMatch && loan.id.lowercased().contains(searchText.lowercased())
             }
         })
         tableView.reloadData()

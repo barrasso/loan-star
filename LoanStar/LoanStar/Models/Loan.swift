@@ -9,7 +9,7 @@
 import Foundation
 
 struct Loan {
-    let name : String
+    let id : String
     let amount : String
     let category : String
 
