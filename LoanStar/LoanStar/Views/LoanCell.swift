@@ -15,9 +15,10 @@ class LoanCell: UITableViewCell {
     
     var loan: Loan? {
         didSet {
-            // set params
-            amountLabel.text = loan?.amount
-            statusLabel.text = loan?.category
+            if let loan = loan {
+                amountLabel.text = loan.amount
+                statusLabel.text = loan.category
+            }
         }
     }
     
