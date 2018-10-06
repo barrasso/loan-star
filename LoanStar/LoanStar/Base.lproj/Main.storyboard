@@ -69,17 +69,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q6K-92-VOe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q6K-92-VOe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoanCell" id="xzc-za-ROA">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LoanCell" rowHeight="80" id="xzc-za-ROA">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xzc-za-ROA" id="GqU-xI-LVt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BvX-YW-30f" kind="show" identifier="showDetail" id="UX6-GX-tvP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -149,6 +152,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndp-C1-QYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="988" y="198"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="WRb-hd-t49">
+            <objects>
+                <viewController id="BvX-YW-30f" customClass="DetailViewController" customModule="LoanStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="6wL-FN-nrb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-YY-TZ1">
+                                <rect key="frame" x="16" y="87" width="343" height="21"/>
+                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x5h-YY-TZ1" firstAttribute="trailing" secondItem="6wL-FN-nrb" secondAttribute="trailingMargin" id="ATq-Hj-VYM"/>
+                            <constraint firstItem="qhg-BO-AUp" firstAttribute="bottom" secondItem="x5h-YY-TZ1" secondAttribute="bottom" constant="542" id="TcW-CT-XdN"/>
+                            <constraint firstItem="x5h-YY-TZ1" firstAttribute="leading" secondItem="6wL-FN-nrb" secondAttribute="leadingMargin" id="Z1w-Ne-gEv"/>
+                            <constraint firstItem="x5h-YY-TZ1" firstAttribute="top" secondItem="qhg-BO-AUp" secondAttribute="top" constant="23" id="xpe-gX-D0S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qhg-BO-AUp"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailDescriptionLabel" destination="x5h-YY-TZ1" id="Moi-Li-0r4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjp-g1-3W3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.5999999999999" y="-543.77811094452773"/>
         </scene>
     </scenes>
     <resources>

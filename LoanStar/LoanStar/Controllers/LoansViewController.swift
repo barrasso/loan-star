@@ -43,15 +43,22 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
             Loan(name: "Mark Loan", amount: "100.00", category: "Open"),
             Loan(name: "Brendan Loan", amount: "100.00", category: "Filled"),
             Loan(name: "Max Loan", amount: "100.00", category: "Closed"),
+            Loan(name: "Mark Loan", amount: "100.00", category: "Open"),
+            Loan(name: "Brendan Loan", amount: "100.00", category: "Filled"),
+            Loan(name: "Max Loan", amount: "100.00", category: "Closed"),
             Loan(name: "David Loan", amount: "100.00", category: "Open")
         ]
         
     }
     
     // MARK: - Table View
-    
+        
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,10 +94,10 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
                 } else {
                     loan = loans[indexPath.row]
                 }
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                let controller = segue.destination as! DetailViewController
                 controller.detailLoan = loan
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
+                //controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                //controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }

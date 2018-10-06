@@ -11,7 +11,6 @@ import UIKit
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-    @IBOutlet weak var loanImageView: UIImageView!
 
     var detailLoan: Loan? {
         didSet {
@@ -21,9 +20,8 @@ class DetailViewController: UIViewController {
     
     func configureView() {
         if let detailLoan = detailLoan {
-            if let detailDescriptionLabel = detailDescriptionLabel, let loanImageView = loanImageView {
+            if let detailDescriptionLabel = detailDescriptionLabel {
                 detailDescriptionLabel.text = detailLoan.name
-                loanImageView.image = UIImage(named: detailLoan.name)
                 title = detailLoan.category
             }
         }
