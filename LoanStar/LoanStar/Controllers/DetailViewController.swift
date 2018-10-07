@@ -22,13 +22,13 @@ class DetailViewController: UIViewController {
         if let detailLoan = detailLoan {
             if let detailDescriptionLabel = detailDescriptionLabel {
                 detailDescriptionLabel.text = detailLoan.id
-                title = detailLoan.category
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Loan Details"
         configureView()
     }
 }

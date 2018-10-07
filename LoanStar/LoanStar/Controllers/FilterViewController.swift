@@ -40,6 +40,7 @@ class FilterViewController: FormViewController {
     @objc func filter(_: UIBarButtonItem!) {
         let config = self.form.formValues()
         UserDefaults.standard.set(config, forKey: "FilterConfig")
+        // TODO: re-query with new config profile
         _ = navigationController?.popViewController(animated: true)
     }
     

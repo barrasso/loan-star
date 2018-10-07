@@ -183,9 +183,9 @@
 		A1D59EEA21687C340033544A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A1D59EEE21687C560033544A /* UIColor+Extension.swift */,
-				A1D59EF021687C690033544A /* Double+Extension.swift */,
 				A1D59EF221687C7D0033544A /* UIView+Extension.swift */,
+				A1D59EF021687C690033544A /* Double+Extension.swift */,
+				A1D59EEE21687C560033544A /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,8 +195,8 @@
 			children = (
 				A1D59EF42168807A0033544A /* Plist.swift */,
 				A1D59EFA216885640033544A /* Loan.swift */,
-				A1D59F0021689FDB0033544A /* LoanManager.swift */,
 				A1D59F022168A75F0033544A /* SwiftyJSON.swift */,
+				A1D59F0021689FDB0033544A /* LoanManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

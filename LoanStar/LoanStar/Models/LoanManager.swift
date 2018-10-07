@@ -26,7 +26,6 @@ final class LoanManager {
             if let config = UserDefaults.standard.dictionary(forKey: "FilterConfig") {
                 let json = JSON(config)
                 let componentsStr = "termFrom=\(json["termSlider"].doubleValue/100)&amountFrom=\(json["amountSlider"].doubleValue/100)&interestFrom=\(json["interestSlider"].doubleValue/100)&" + defaultComponents
-                print(componentsStr)
                 urlComponents.query = componentsStr
             } else {
                 urlComponents.query = defaultComponents
@@ -47,10 +46,6 @@ final class LoanManager {
             }
             dataTask?.resume()
         }
-    }
-    
-    func post() {
-        
     }
     
     fileprivate func updateLoanResults(_ data: Data) {
