@@ -12,5 +12,6 @@ struct Loan {
     let id : String
     let amount : String
     let category : String
-
+    let created : String
+    let expires : String
 }

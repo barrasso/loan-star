@@ -14,7 +14,7 @@ final class LoanManager {
     typealias JSONDictionary = [String: Any]
     typealias QueryResult = ([Loan]?, String) -> ()
     
-    let defaultComponents = "sortBy=CreationTime&limit=25"
+    let defaultComponents = "sortBy=CreationTime&limit=30"
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     var loans: [Loan] = []
@@ -67,7 +67,9 @@ final class LoanManager {
                 let amount = Web3Utils.formatToEthereumUnits(bigIntAmount)
                 let id = loanObject["id"].stringValue
                 let category = loanObject["status"].stringValue
-                loans.append(Loan(id: id, amount: amount!, category: category))
+                let created = loanObject["creationTime"].stringValue
+                let expires = loanObject["expirationTime"].stringValue
+                loans.append(Loan(id: id, amount: amount!, category: category, created: created, expires: expires))
             }
         }
     }
