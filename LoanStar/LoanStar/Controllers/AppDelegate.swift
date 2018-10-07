@@ -16,14 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+                
         /* global navigation bar appearance */
         UINavigationBar.appearance().barTintColor = UIColor.colorFromHex(rgbValue: 0xFFFFFF)
         UINavigationBar.appearance().tintColor = UIColor.blueStar
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir-Heavy", size: 18)!,NSAttributedString.Key.foregroundColor: UIColor.colorFromHex(rgbValue: 0x333333)]
         
         /* global tab bar appearance */
-        UITabBar.appearance().tintColor = UIColor.blueStar
+        UITabBar.appearance().tintColor = UIColor.mariner
         UITabBar.appearance().barTintColor = UIColor.colorFromHex(rgbValue: 0xFFFFFF)
         UITabBar.appearance().backgroundColor = UIColor.colorFromHex(rgbValue: 0xFFFFFF)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.colorFromHex(rgbValue: 0x333333)], for: .normal)

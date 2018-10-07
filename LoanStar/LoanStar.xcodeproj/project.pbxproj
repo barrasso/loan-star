@@ -29,6 +29,7 @@
 		A1D59F0121689FDB0033544A /* LoanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D59F0021689FDB0033544A /* LoanManager.swift */; };
 		A1D59F032168A75F0033544A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D59F022168A75F0033544A /* SwiftyJSON.swift */; };
 		A1D59F0521692E820033544A /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D59F0421692E820033544A /* LoanCell.swift */; };
+		A1DD36F921696DD30014A1FB /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD36F821696DD30014A1FB /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		A1D59F0021689FDB0033544A /* LoanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanManager.swift; sourceTree = "<group>"; };
 		A1D59F022168A75F0033544A /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		A1D59F0421692E820033544A /* LoanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCell.swift; sourceTree = "<group>"; };
+		A1DD36F821696DD30014A1FB /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		B42FB894553D2D90C10F535D /* Pods_LoanStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoanStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3F3B7EE574D03CDBA524A4 /* Pods_LoanStarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoanStarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E3E7D396C952A1C8762C15 /* Pods-LoanStarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoanStarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoanStarUITests/Pods-LoanStarUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,9 +205,10 @@
 			isa = PBXGroup;
 			children = (
 				A1D59EBC21687B5E0033544A /* AppDelegate.swift */,
+				A1DD36F821696DD30014A1FB /* FilterViewController.swift */,
+				A1D59EFE216888170033544A /* DetailViewController.swift */,
 				A1D59EF6216885160033544A /* LoansViewController.swift */,
 				A1D59EF8216885280033544A /* ProfileViewController.swift */,
-				A1D59EFE216888170033544A /* DetailViewController.swift */,
 				A1987B3D2169483C00E1E599 /* CreateViewController.swift */,
 			);
 			path = Controllers;
@@ -397,6 +400,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LoanStar/Pods-LoanStar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
@@ -411,6 +416,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
@@ -484,6 +491,7 @@
 				A1D59EF121687C690033544A /* Double+Extension.swift in Sources */,
 				A1D59EEF21687C560033544A /* UIColor+Extension.swift in Sources */,
 				A1D59EFD216886D40033544A /* SearchFooter.swift in Sources */,
+				A1DD36F921696DD30014A1FB /* FilterViewController.swift in Sources */,
 				A1D59EF321687C7D0033544A /* UIView+Extension.swift in Sources */,
 				A1D59EF9216885280033544A /* ProfileViewController.swift in Sources */,
 				A1D59EFF216888170033544A /* DetailViewController.swift in Sources */,

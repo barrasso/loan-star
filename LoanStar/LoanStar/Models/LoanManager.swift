@@ -14,6 +14,7 @@ final class LoanManager {
     typealias JSONDictionary = [String: Any]
     typealias QueryResult = ([Loan]?, String) -> ()
     
+    let defaultComponents = "sortBy=CreationTime&limit=25"
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     var loans: [Loan] = []
@@ -22,7 +23,14 @@ final class LoanManager {
     func getLoanResults(_ completion: @escaping QueryResult) {
         dataTask?.cancel()
         if var urlComponents = URLComponents(string: "https://kovan-api.bloqboard.com/api/v1/Debts") {
-            urlComponents.query = "sortBy=CreationTime&limit=20"
+            if let config = UserDefaults.standard.dictionary(forKey: "FilterConfig") {
+                let json = JSON(config)
+                let componentsStr = "termFrom=\(json["termSlider"].doubleValue/100)&amountFrom=\(json["amountSlider"].doubleValue/100)&interestFrom=\(json["interestSlider"].doubleValue/100)&" + defaultComponents
+                print(componentsStr)
+                urlComponents.query = componentsStr
+            } else {
+                urlComponents.query = defaultComponents
+            }
             guard let url = urlComponents.url else { return }
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
                 defer { self.dataTask = nil }

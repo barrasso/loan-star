@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import PopupDialog
 
 class LoansViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -101,6 +102,32 @@ class LoansViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
     }
+    
+//    func showFilterPopup(animated: Bool = true) {
+//        if let filterVC = storyboard?.instantiateViewController(withIdentifier: "RootFilterViewController") {
+//
+//            // Create the dialog
+//            let popup = PopupDialog(viewController: filterVC,
+//                                    buttonAlignment: .horizontal,
+//                                    transitionStyle: .bounceDown,
+//                                    tapGestureDismissal: false,
+//                                    panGestureDismissal: false)
+//
+////            // Create first button
+////            let buttonOne = CancelButton(title: "CANCEL", height: 60) {
+////                print("You canceled the dialog")
+////                self.dismiss(animated: animated, completion: nil)
+////            }
+////
+////            // Create second button
+////            let buttonTwo = DefaultButton(title: "RATE", height: 60) {
+////                print("You hit the second button")
+////            }
+////
+////            popup.addButtons([buttonOne, buttonTwo])
+//            present(popup, animated: animated, completion: nil)
+//        }
+//    }
     
     // MARK: - Private instance methods
     

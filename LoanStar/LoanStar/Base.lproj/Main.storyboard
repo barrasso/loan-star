@@ -141,6 +141,11 @@
                     <navigationItem key="navigationItem" id="bgK-jv-gnr">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="cKh-I5-Jp2"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="BVb-rb-uuw">
+                            <connections>
+                                <segue destination="6aa-WT-ZN2" kind="show" id="CZP-iT-cn2"/>
+                            </connections>
+                        </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="iqz-lY-MoJ">
                             <rect key="frame" x="67.5" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -243,11 +248,40 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvV-pF-riM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="-1249"/>
+            <point key="canvasLocation" x="1902" y="-1260"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="GKa-Mk-HMg">
+            <objects>
+                <tableViewController storyboardIdentifier="FilterViewController" id="6aa-WT-ZN2" customClass="FilterViewController" customModule="LoanStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CJC-GF-gb5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" id="xjD-6L-N5q">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xjD-6L-N5q" id="hK1-0i-GVg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6aa-WT-ZN2" id="crh-Sb-nMe"/>
+                            <outlet property="delegate" destination="6aa-WT-ZN2" id="97P-v0-fy1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZN-kd-n2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="-1261"/>
         </scene>
     </scenes>
     <resources>
         <image name="loanstar-logo-trans" width="400" height="126"/>
+        <image name="menu" width="30" height="30"/>
         <image name="order" width="30" height="30"/>
         <image name="user_male" width="30" height="30"/>
     </resources>

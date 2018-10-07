@@ -11,6 +11,7 @@ import UIKit
 public extension UIColor {
     
     static let blueStar = UIColor.colorFromHex(rgbValue: 0x354678)
+    static let mariner = UIColor.colorFromHex(rgbValue: 0x2c82c9)
     
     static func colorFromHex(rgbValue: UInt32, alpha: Double = 1.0) -> UIColor {
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0

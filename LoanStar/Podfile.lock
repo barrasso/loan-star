@@ -2,6 +2,9 @@ PODS:
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
   - CryptoSwift (0.11.0)
+  - DynamicBlurView (2.0.2)
+  - PopupDialog (0.8.1):
+    - DynamicBlurView (~> 2.0)
   - PromiseKit (6.4.0):
     - PromiseKit/CorePromise (= 6.4.0)
     - PromiseKit/Foundation (= 6.4.0)
@@ -26,6 +29,7 @@ PODS:
     - secp256k1_ios (~> 0.1)
 
 DEPENDENCIES:
+  - PopupDialog
   - SwiftForms (~> 1.8)
   - web3swift (~> 1.1.6)
 
@@ -33,6 +37,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BigInt
     - CryptoSwift
+    - DynamicBlurView
+    - PopupDialog
     - PromiseKit
     - Result
     - scrypt
@@ -44,6 +50,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
+  PopupDialog: 3d4e8e0795c3a614f407d730986c9b9af9781123
   PromiseKit: ae3616f45d7bb9bf4ff1e91abc9b7a8c48a340e0
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   scrypt: a828bd579086977f6db7f9798d1c6332ccaaed4e
@@ -52,6 +60,6 @@ SPEC CHECKSUMS:
   SwiftForms: f0d4d30401e21de87d9b7b63a4691a3d4e22bab5
   web3swift: 669f16455d2dffb7bab4b61f39b16f3633d37c7d
 
-PODFILE CHECKSUM: 7eddf078ac53f734877c37aa0d82d7c4368945d8
+PODFILE CHECKSUM: 9a2b24d505aaeccfc8949e4af4138bf37880ee22
 
 COCOAPODS: 1.5.3

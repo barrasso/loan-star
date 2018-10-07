@@ -8,6 +8,7 @@ target 'LoanStar' do
   # Pods for LoanStar
   pod 'web3swift', '~> 1.1.6'
   pod 'SwiftForms', '~> 1.8'
+  pod 'PopupDialog'
 
   target 'LoanStarTests' do
     inherit! :search_paths
