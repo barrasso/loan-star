@@ -7,24 +7,33 @@
 //
 
 import UIKit
+import web3swift
 
 class ProfileViewController: UIViewController {
-
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+    var ks: EthereumKeystoreV3?
+    var walletAddress: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if checkWallet() {
+            if let usernameLabel = usernameLabel {
+                usernameLabel.text = "@username\n\(walletAddress ?? "")"
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func checkWallet() -> Bool {
+        let keystoreManager = KeystoreManager.managerForPath(self.userDir + "/keystore")
+        if (keystoreManager?.addresses?.count != 0) {
+            ks = keystoreManager?.walletForAddress((keystoreManager?.addresses![0])!) as? EthereumKeystoreV3
+            self.walletAddress = ks?.addresses?.first?.address
+            return true
+        } else {
+            return false
+        }
     }
-    */
-
 }

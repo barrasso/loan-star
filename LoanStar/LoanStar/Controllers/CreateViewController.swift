@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftForms
+import PopupDialog
 
 class CreateViewController: FormViewController {
 
@@ -38,17 +39,8 @@ class CreateViewController: FormViewController {
     // MARK: Actions
     
     @objc func submit(_: UIBarButtonItem!) {
-        
-        let message = self.form.formValues().description
-        
-        let alertController = UIAlertController(title: "Form output", message: message, preferredStyle: .alert)
-        
-        let cancel = UIAlertAction(title: "OK", style: .cancel) { (action) in
-        }
-        
-        alertController.addAction(cancel)
-        
-        self.present(alertController, animated: true, completion: nil)
+        let message = self.form.formValues()
+        showConfirmationDialog(message: message)
     }
     
     // MARK: Private interface
@@ -120,5 +112,30 @@ class CreateViewController: FormViewController {
         form.sections = [section1, section2, section3, section4]
         
         self.form = form
+    }
+    
+    // MARK: Helper Functions
+    
+    func showConfirmationDialog(animated: Bool = true, message: [String:Any]) {
+        let jsonMsg = JSON(message)
+        
+        // Prepare the popup assets
+        let title = "You created a new loan"
+        let message = "Amount: \(jsonMsg["loanTag"]) \(jsonMsg["loanPicker"])\nTerm: \(jsonMsg["termTag"]) \(jsonMsg["termPicker"])\n Interest: \(jsonMsg["interestTag"]) %\n Collateral: \(jsonMsg["collateralTag"]) \(jsonMsg["collateralPicker"])"
+        let image = UIImage(named: "blue-star")
+        
+        // Create the dialog
+        let popup = PopupDialog(title: title, message: message, image: image, preferredWidth: 580)
+        
+        // Create second button
+        let buttonThree = DefaultButton(title: "OK") { [weak popup] in
+            popup?.shake()
+        }
+        
+        // Add buttons to dialog
+        popup.addButtons([buttonThree])
+        
+        // Present dialog
+        self.present(popup, animated: animated, completion: nil)
     }
 }
