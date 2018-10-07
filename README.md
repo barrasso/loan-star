@@ -1,3 +1,8 @@
+**Submission for Bloqboard / Loanscan API Bounty on [Gitcoin](https://gitcoin.co/issue/ethglobal/ethsanfrancisco-bounties/9/1373)**
+
+- repo: https://github.com/barrasso/loan-star
+- devpost: https://devpost.com/software/loanstar
+
 # LoanStar
 
 A native mobile app written in Swift that enables one-click borrowing from anywhere in the world by tapping into Dharma's borderless, censorship resistant credit market.
